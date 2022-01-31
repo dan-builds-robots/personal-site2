@@ -1,0 +1,1140 @@
+<head>
+    
+    <title>dajayi</title>
+
+    <!-- this link is for bootstrap styles -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+
+    <!-- import css -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="icons/dan.png">
+
+    <!-- <style>
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            /* overflow: hidden;  */
+            margin: 0;
+            padding: 0;
+        }
+        .adjacent {
+            float:left;
+        }
+
+        .center {
+            align-items: center;
+            align-content: center;
+            text-align: center;
+            /* justify-content: center; */
+        }
+
+        .gradient {
+            background-image: linear-gradient(to bottom right, #9ce9ff, #fff0fd);
+        }
+
+        .light-blue {
+            background-color: #d9feff;
+        }
+
+        .black-text {
+            color: black
+        }
+
+        .white-text {
+            color: white
+        }
+
+        .massive {
+            font-size: xx-large;
+        }
+
+        .extra-big {
+            font-size: x-large;
+        }
+
+        .big {
+            font-size: large;
+        }
+
+        .white-bg {
+            background-color: white;
+        }
+
+        .spacing {
+            margin: 50px;
+        }
+
+        .spacing2 {
+            padding: 50px;
+        }
+
+        #pfp {
+            border-radius: 100%
+        }
+
+        .thin {
+            font-weight: 300;
+        }
+
+        .right {
+            justify-content: end;
+        }
+
+        .left-text {
+            text-align: left;
+        }
+
+        .p-horizontal {
+            display:flex; 
+            flex-direction: row;
+        }
+
+        .drop-shadow {
+			box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        }
+
+        .holder {
+			padding: 25px;
+			box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+			width: 620px;
+			height: 350px;
+			display:inline-block;
+			border-radius: 15px;
+			vertical-align: top;
+            position: relative;
+            margin: 20;
+            flex: 1;
+            align-self: baseline;
+            
+            
+			
+		}
+
+        .double {
+            height: 700px;
+        }
+
+        .bottom {
+            position: absolute;
+            bottom: 25px;
+        }
+
+        .leading {
+            line-height: 1.8;
+        }
+
+        .big-leading {
+            line-height: 4;
+        }
+
+        .image-container {
+            position: relative;
+            width: 190;
+        }
+
+        .slide {
+            display: none;
+        }
+
+        .underline {
+            text-decoration: underline;
+        }
+
+        .faded-text {
+            color: rgb(192, 192, 192)
+        }
+
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 40%;
+            width: auto;
+            padding: 16px;
+            margin-top: -0px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: -20;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev {
+            left: -20;
+        }
+        .red {
+            background-color: red;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .block {
+			display:inline-block;
+        }
+
+        .resume {
+            overflow: hidden;
+        }
+
+        .left {
+            float: left;
+        }
+
+        iframe {
+            border-style: none;
+        }
+
+        .evenly-space {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .vertical-middle {
+            /* display: flex; */
+            justify-content: center;
+            align-items: center; 
+        }
+
+        .table {
+            display: table;
+            /* height: 100%; */
+        }
+
+        .element {
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .carousel-control-prev-icon, 
+        .carousel-control-next-icon,
+        .carousel-indicators {
+            filter: invert(100%);
+        }
+
+        .glow :hover {
+            /* box-shadow: 0 5px 15px rgba(62, 168, 255, 0.8); */
+            /* outline-style: solid; */
+			box-shadow: 0 8px 16px 0 rgba(79, 190, 255, 0.8), 0 6px 20px 0 rgba(79,190,255,0.7);
+        }
+
+        /* style="justify-content: space-between;" */
+
+    </style> -->
+
+</head>
+
+
+<body>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg py-3 navbar-light gradient">
+
+        <a class="navbar-brand" href="index.html">
+            <!-- <img class="adjacent" src="pfp.jpeg" width="50" height="50" alt=""> -->
+            <img class="adjacent" src="icons/dan.png" width="50" height="50" alt="">
+            <a class="nav-item nav-link black-text massive thin" href="index.html">daniel ajayi</a>
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse right justify-content-end" id="navbarNavAltMarkup">
+            <div class="navbar-nav left">
+                <!-- <a class="nav-item nav-link active big" href="index.html">Home <span class="sr-only">(current)</span></a> -->
+                <a class="nav-item nav-link active big" href="index.html">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link big" href="#projects">Projects</a>
+                <a class="nav-item nav-link big" href="experience.html">Experience</a>
+                <a class="nav-item nav-link big" href="timeline.html">Coursework</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- spacing -->
+    <div class="spacing"></div>
+    <div style="padding: 10px;"></div>
+
+    <!-- bio -->
+    <div  class='spacing p-horizontal' id="bio">
+        <img id="pfp" src="pfp.jpeg" width="250" height="250" alt="">
+        <div style="margin-right: 50px"></div>
+        <div>
+            <p class="extra-big">
+                Hi I'm Daniel Ajayi and I'm a student at MIT 
+                majoring in Electrical Engineering and Computer 
+                Science and minoring in Mechanical Engineering. 
+                I am interested in software development and 
+                robotics. I have an extensive repertoire of side
+                projects you can view on this site.
+            </p>
+            
+            <div class="p-horizontal glow">
+
+                <a href="https://github.com/dan-builds-robots" target="_blank">
+                    <img src="icons/github-square3.png" alt="GitHub" width="45" height="45">
+                </a>
+
+                <div style="margin: 6px;"></div>
+                
+                <a href="https://www.linkedin.com/in/daniel-ajayi-112a461b1/" target="_blank">
+                    <img src="icons/linkedin-square.png" alt="LinkedIn" width="45" height="45">
+                </a>
+                
+                <div style="margin: 6px;"></div>
+
+                <a href="https://youtube.com/danielajayi" target="_blank">
+                    <img src="icons/youtube-square.png" alt="YouTube" width="45" height="45">
+                </a>
+                
+                <div style="margin: 6px;"></div>
+
+                <a href="mailto: dajayi@mit.edu" target="_blank">
+                    <img src="icons/email-square.png" alt="email" width="45" height="45">
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+    <div class='center'>
+
+        <div class="dark-blue gradient align-bottom block block-margin"  id="contacts">
+            <div class="spacing2 left-text">
+                
+                <p class="massive"><b>Bio</b></p>
+                <p class='leading'>Hello! I'm Daniel and welcome to my personal site! I created this site in January of 2022 using HTML, CSS, and Javascript 
+                    to make it easier to demonstrate my technical skills when opportunities present. I love to create and many of my technical skills are
+                     self-taught.</p>
+            </div>
+        </div>
+        <!-- resume -->
+        <div class="center resume block align-bottom block-margin">
+
+            <a href="https://drive.google.com/file/d/11aOG65yrRT2hSTIqJ0N7VTtHUI12Omn2/preview" target="_blank">
+                <p class="extra-big underline">resume</p>
+            </a>
+            
+            <iframe src="https://drive.google.com/file/d/11aOG65yrRT2hSTIqJ0N7VTtHUI12Omn2/preview" height="400" width="100%"></iframe>
+        
+        </div>
+
+    </div>
+
+    <div class="spacing2"></div>
+
+    <!-- filters -->
+    <!-- <div id="filter-container">
+        <div class="filter red">
+            <p>web dev</p>
+        </div>
+
+        <div class="filter red">
+            <p>mobile apps</p>
+        </div>
+
+        <div class="filter red">
+            <p>machine learning</p>
+        </div>
+
+
+        <div class="filter red">
+            <p>robots</p>
+        </div>
+
+    </div> -->
+    
+    <div class="spacing"></div>
+    <div class="projects gradient" id="projects">
+        <div style="padding: 75px"></div>
+        <p class="center massive2 thin">Projects</p>
+
+        <!-- filters -->
+        <div id="filter-container2">
+
+            <p class="big" style="margin: 0; padding: 0;"><b>Filter Projects</b></p>
+
+            <button class="filter2 active2" onclick="filterSelection('all')">
+                <p>all</p>
+            </button>
+
+            <button class="filter2" onclick="filterSelection('web-dev')">
+                <p>web dev</p>
+            </button>
+    
+            <button class="filter2" onclick="filterSelection('mobile-apps')">
+                <p>mobile apps</p>
+            </button>
+    
+            <button class="filter2" onclick="filterSelection('ml')">
+                <p>machine learning</p>
+            </button>
+    
+            <button class="filter2" onclick="filterSelection('robots')">
+                <p>robots</p>
+            </button>
+    
+            <button class="filter2" onclick="filterSelection('games')">
+                <p>games</p>
+            </button>
+            
+            <!--     
+            <button class="filter2" onclick="filterSelection('hardware')">
+                <p>hardware</p>
+            </button> -->
+    
+            <button class="filter2" onclick="filterSelection('chrome-extensions')">
+                <p>chrome extensions</p>
+            </button>
+        </div>
+
+        <!-- project holder -->
+        <div class="center spacing" id="projects-holder">
+
+            <!-- teddy the depression fighter -->
+            <div class="project white-bg double mobile-apps" style="height: 655">
+                <a href="http://ttdf.epizy.com/">
+                    <p class="extra-big underline"><b>Teddy The Depression Fighter</b></p>
+                </a>
+
+
+                <!-- bullet points -->
+                <ul class="left-text leading">
+                    <li>App that sends periodic messages to user's phone to battle <b>depression, anxiety, and insecurity</b></li>
+
+                    <li>features button that instantly dials the national <b>depression and suicide prevention hotline</b></li>
+
+                    <li>includes industry-standard <b>depression screening examination</b></li>
+
+                    <li>
+                        <a class="underline" href="https://thesunpapers.com/2020/09/21/williamstown-senior-creates-app-to-help-users-fight-depression/" target="_blank" style="bottom: 0px;">
+                        <b>featured in the Williamstown Sun</b>
+                        </a>
+                    </li>
+                    <li class="faded-text">constructed summer of 2020</li>
+                </ul>
+                
+                <div style="padding: 5px;"></div>
+
+    
+                <div  class="evenly-space">
+                    
+                    <!-- newspaper picture -->
+                    <div class="" style="height: 338px">
+                        <a class="left" class="red" href="https://thesunpapers.com/2020/09/21/williamstown-senior-creates-app-to-help-users-fight-depression/" target="_blank">
+                            <img src="ttdf/newspaper feature2.png" class="left" height="270"/>
+                            <div style="margin-top: auto" class="center vertical-middle">
+                            </div>
+
+                            <!-- <div class="">
+                                <p class='vertical-middle center underline big-leading'><b>Featured in Williamstown Sun</b></p>
+                            </div> -->
+
+                        </a>
+                    </div>
+                    
+                    <div id="carouselExampleIndicators" class="carousel slide image-container" data-ride="carousel">
+
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                        </ol>
+
+                        <div class="carousel-inner">
+
+                          <div class="carousel-item active">
+                            <img src="ttdf/depression exam.jpg"  class="d-block w-100" alt="...">
+                          </div>
+
+                          <div class="carousel-item">
+                            <img src="ttdf/depression score.jpg"  class="d-block w-100" alt="...">
+                          </div>
+
+                          <div class="carousel-item">
+                            <img src="ttdf/phone number.jpg"  class="d-block w-100" alt="...">
+                          </div>
+
+                          <div class="carousel-item">
+                            <img src="ttdf/national suicide line.jpg"  class="d-block w-100" alt="...">
+                          </div>
+
+                          <div class="carousel-item">
+                            <img src="ttdf/idea.jpg"  class="d-block w-100" alt="...">
+                          </div>
+
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                          </a>
+                          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                          </a>
+                      </div>
+                        
+                </div>
+
+                <!-- icons  -->
+                <div class="bottom p-horizontal glow">
+                    <a href="https://github.com/dan-builds-robots/teddy-the-depression-fighter" target="_blank">
+                        <img src="icons/github-square3.png" alt="GitHub" width="40" height="40">
+                    </a>
+
+                    <div style="margin: 5px;"></div>
+
+                    <a href="https://thesunpapers.com/2020/09/21/williamstown-senior-creates-app-to-help-users-fight-depression/" target="_blank">
+                        <img src="icons/newspaper.png" alt="Williamstown Sun" height="40">
+                    </a>
+                    
+                    <div style="margin: 5px;"></div>
+
+                    <a href="https://play.google.com/store/apps/details?id=daniel.ajayi.teddythedepressionfighter" target="_blank">
+                        <img 
+                            src="icons/google-play-badge2.png" 
+                            alt="Google Play" height="40"
+                        >
+                    </a>
+                    
+                </div>
+
+            </div>
+
+            <!-- every currency -->
+            <div class="project white-bg mobile-apps" style="height:540">
+                    <p class="extra-big"><b>every currency</b></p>
+                <div class="p-horizontal">
+                    
+                    <div>
+                        <ul class="left-text leading" style="margin-right: 30">
+                            <li>currency converter</li>
+                            <li>cross-platform <b>(android & ios)</b></li>
+                            <li>constructed in <b>react native</b></li> 
+                            <li>translates different currencies using an API</li>
+                            <li>Pulls the conversion rates from the web every second</li>
+                            <li>Constructed in one all-nighter as a fun challenge</li>
+                            <li class="faded-text">date constructed: December 26-27, 2021</li>
+                        </ul>
+
+                        <!-- icons  -->
+                        <div class="bottom p-horizontal glow">
+                            <a href="https://github.com/dan-builds-robots/every-currency" target="_blank">
+                                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="40" height="40">
+                            </a>
+                            
+                        </div>
+                    
+                    </div>
+
+                    <img src="every-currency2.gif" width="220" style="border-radius: 20px">
+
+                </div>
+            
+            </div>
+
+            <!-- automating dino run -->
+            <div class="project white-bg hardware robots" style="height:540">
+                <p class="extra-big"><b>automating dino run</b></p>
+                <p class="left-text">Automating the dino run game on google chrome with an arduino uno, a photoresistor, and a servo motor.</p>
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/VXWVndg5YJ8?start=115" 
+                title="YouTube video player" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                <!-- icons  -->
+                <div class="bottom p-horizontal glow">
+                    <a href="https://github.com/dan-builds-robots/hacking-dino-run" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="40" height="40">
+                    </a>
+                    
+                </div>
+
+            </div>
+            
+            <!-- chrome extensions -->
+            <div class="project white-bg chrome-extensions">
+                <p class="extra-big"><b>curious george extension</b></p>
+                <p class="left-text">A chrome extension that turns <b>every</b> picture on <b>every</b> website into a <b>different</b> picture of curious george.
+                    <span class="faded-text">constructed summer of 2021</span>
+                </p>
+                <img src="curious george/curious george-linkedin.jpeg" width="100%">
+
+                <!-- icons  -->
+                <div class="p-horizontal glow" style="margin-top: 20px;">
+                    <a href="https://github.com/dan-builds-robots/curious-george" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="40" height="40">
+                    </a>
+                    
+                    <div style="margin: 5px;"></div>
+
+                    <a href="https://chrome.google.com/webstore/detail/curious-george/jiciecmmhfbcefjjmbbbkcjbjlomoemh?hl=en&authuser=1" target="_blank">
+                        <img src="chrome-web-store.jpeg" alt="GitHub" width="40" height="40">
+                    </a>
+                    
+                </div>
+            </div>
+
+            <!-- DLBC SJ Official Site -->
+            <div class="project white-bg web-dev" style="height:590;">
+                <a href="https://www.dlbcsj.org/" target="_blank">
+                    <p class="extra-big underline"><b>DLBC SJ Official Website</b></p>
+                </a>
+                <p class="left-text">I coded the website for Deeper life Bible Church South Jersey in HTML, CSS, and Javascript.</p>
+                <iframe class="drop-shadow" width="100%" height="360" src="https://www.dlbcsj.org/"></iframe>
+                
+                <!-- icons  -->
+                <div class="bottom p-horizontal glow">
+                    <a href="https://github.com/dan-builds-robots/dlbc-sj-website" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="40" height="40">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Gotta Get 24 -->
+            <div class="project white-bg mobile-apps games" style="height:500">
+                <p class="extra-big"><b>Gotta Get 24</b></p>
+                <div class='p-horizontal'>
+                    <div>
+                        <ul class="left-text leading" style="margin-right: 30">
+                            <li><b>android app</b></li>
+                            <li>player is given 90 seconds to create the number 24 as many times as possible using elementary operations and 4 randomly generated numbers</li> 
+                            <li>created with Java in <b>android studio</b></li>
+                            <li class="faded-text">constructed summer of 2020</li>
+                        </ul>
+                        <!-- icons  -->
+                        <div class="bottom p-horizontal glow">
+                            <a href="https://github.com/dan-builds-robots/gotta-get-24" target="_blank">
+                                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="40" height="40">
+                            </a>
+                            
+                            <div style="margin: 5px;"></div>
+            
+                            <a href="https://play.google.com/store/apps/details?id=daniel.ajayi.gottaget24" target="_blank">
+                                <img 
+                                    src="icons/google-play-badge2.png" 
+                                    alt="Google Play" height="40"
+                                >
+                            </a>
+                            
+                        </div>
+                    </div>
+
+                    <img src="gotta get 24.gif" width="220">
+                    
+                </div>
+                
+            </div>
+
+            <!-- real estate appraiser -->
+            <div class="project white-bg ml">
+                <p class="extra-big"><b>AI Real Estate Appraiser</b></p>
+
+                <div class='left-text'>
+                    <p>Scraped realtor.com using Selenium in Python. Stored the information in csv format and trained a machine learning model using sklearn to predict the value of the property. Deployed the model using Flask to a webpage constructed with HTML & CSS. <span class="faded-text">constructed February of 2021.</span></p>
+                </div>
+
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/kTZdXSBHlf8?start=15" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       
+                <!-- icons  -->
+                <div class="p-horizontal glow" style="margin-top: 15">
+                    <a href="https://github.com/dan-builds-robots/AI-real-estate-appraiser" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="40" height="40">
+                    </a>
+                </div>
+            </div>
+
+            <!-- RateMyProtector -->
+            <div class="project white-bg mobile-apps" style="height:540">
+                <p class="extra-big"><b>RateMyProtector</b></p>
+                <div class='left-text'>
+                    <p>An app designed to foster safer and more transparent communities. Constructed in collaboration with two friends (Tyrin-Ian Todd & Ify Ijeli) at MIT during HackMIT 2021.</p>
+                </div>
+                <!-- icons  -->
+                <div class="bottom p-horizontal glow">
+                    <a href="https://github.com/dan-builds-robots/rate-my-protector" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="40" height="40">
+                    </a>
+                    
+                </div>
+            </div>
+
+            <!-- cart drop -->
+            <div class="project white-bg mobile-apps games" style="height:540">
+                <p class="extra-big"><b>Cart Drop</b></p>
+
+                <div class="left-text">
+                    <p>An <b>android mobile game</b> where users tap to drop the fruit at the top of the screen into the corresponding carts passing across the bottom fo the screen. Coded in <b>Java with Android Studio and LibGDX</b>. <b>Images created in Adobe Illustrator</b>. <b>Game music created in FL Studio</b>. <span class="faded-text">constructed summer of 2020.</span></p>
+                </div>
+
+                <!-- icons  -->
+                <div class="bottom p-horizontal glow">
+                    <a href="https://github.com/dan-builds-robots/cart_drop" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="40" height="40">
+                    </a>
+                    
+                    <div style="margin: 5px;"></div>
+                    
+                    <a href="https://play.google.com/store/apps/details?id=daniel.ajayi.gottaget24" target="_blank">
+                        <img 
+                            src="icons/google-play-badge2.png" 
+                            alt="Google Play" height="40"
+                        >
+                    </a>
+                    
+                </div>
+            </div>
+
+            <!-- edge-avoidance robot -->
+            <div class="project white-bg robots hardware" style="height:610">
+                <p class="extra-big"><b>Edge-Avoidance Robot</b></p>
+
+                <div class="left-text">
+                    <p>A robot constructed in collaboration with a friend at MIT that <b>autonomously drives</b> on surfaces and <b>turns away</b> to avoid driving off of the <b>surface edges</b>. Constructed with an <b>arduino uno</b>, two IR sensors, two motorized wheels, two transistors, and a power bank. <span class="faded-text">constructed summer of 2021.</span></p>
+                </div>
+
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/RtUBeVNfbRw"
+                title="YouTube video player" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                <!-- icons  -->
+                <div class="bottom p-horizontal glow">
+                    <a href="https://github.com/dan-builds-robots/AI-real-estate-appraiser" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="40" height="40">
+                    </a>
+                    
+                    <div style="margin: 5px;"></div>
+                    
+                    <a href="https://play.google.com/store/apps/details?id=daniel.ajayi.gottaget24" target="_blank">
+                        <img 
+                            src="icons/google-play-badge2.png" 
+                            alt="Google Play" height="40"
+                        >
+                    </a>
+                    
+                </div>
+            </div>
+
+            <!-- brain games -->
+            <div class="project white-bg mobile-apps games" style="height:520">
+                <p class="extra-big"><b>Brain Games</b></p>
+                <div class="p-horizontal">
+
+                    <ul class="left-text leading" style="margin-right: 30">
+                        <li><b>android app</b></li>
+                        <li>player is 30 seconds to solve as many math questions as possible</li> 
+                        <li>created with <b>Java</b> in <b>android studio</b></li>
+                        <li class="faded-text">constructed summer of 2020</li>
+                    </ul>
+
+                    <img src="brain games.gif" width="200">
+                    
+                    <!-- icons  -->
+                    <div class="bottom p-horizontal glow">
+                        <a href="https://github.com/dan-builds-robots/AI-real-estate-appraiser" target="_blank"> 
+                            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="40" height="40">
+                        </a>
+                        
+                        <div style="margin: 5px;"></div>
+                        
+                        <a href="https://play.google.com/store/apps/details?id=daniel.ajayi.gottaget24" target="_blank">
+                            <img 
+                                src="icons/google-play-badge2.png" 
+                                alt="Google Play" height="40"
+                            >
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- obstacle-avoidance robot -->
+            <div class="project white-bg robots hardware" style="height:555">
+                <p class="extra-big"><b>Obstacle-Avoidance Robot</b></p>
+
+                <div class="left-text">
+                    <p>A robot that drives in a straight line until encountering an obstacle, at which point it turns in a random direction for a random duration of time and continues driving. <span class="faded-text">constructed spring of 2021.</span></p>
+                </div>
+
+
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/Kb9Knu26tvA" 
+                title="YouTube video player" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                
+                <!-- icons  -->
+                <div class="bottom p-horizontal glow">
+
+                    <a href="https://github.com/dan-builds-robots/obstacle-avoidance-robot" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="40" height="40">
+                    </a>
+                    
+                    <div style="margin: 5px;"></div>
+                    
+                    <a href="https://play.google.com/store/apps/details?id=daniel.ajayi.gottaget24" target="_blank">
+                        <img 
+                            src="icons/google-play-badge2.png" 
+                            alt="Google Play" height="40"
+                        >
+                    </a>
+                    
+                </div>
+            </div>
+
+
+            <!-- real estate appraiser -->
+            <div class="project white-bg chrome-extensions">
+                <p class="extra-big"><b>Wikit</b></p>
+
+                <div class='left-text'>
+                    <p>A chrome extension that searches up highlighted text on wikipedia.</p>
+                </div>
+
+
+                <img src="wikit.gif" width="100%">
+                
+
+                <!-- icons  -->
+                <div class="p-horizontal glow" style='margin-top: 20px;'>
+                    
+                    <a href="https://github.com/dan-builds-robots/AI-real-estate-appraiser" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="40" height="40">
+                    </a>
+                    
+                    <div style="margin: 5px;"></div>
+                    
+                    <a href="https://play.google.com/store/apps/details?id=daniel.ajayi.gottaget24" target="_blank">
+                        <img 
+                            src="icons/google-play-badge2.png" 
+                            alt="Google Play" height="40"
+                        >
+                    </a>
+                    
+                </div>
+            </div>
+
+
+            <!-- real estate appraiser -->
+            <div class="project white-bg chrome-extensions">
+                <p class="extra-big"><b>Text2Speech</b></p>
+                <div class='left-text'>
+                    <p>A chrome extension that reads aloud text that is highlighted.</p>
+                </div>
+                <img src="text2speech.gif" width="100%">
+                <!-- icons  -->
+                <div class="p-horizontal glow" style="margin-top: 20px;">
+                    
+                    <a href="https://github.com/dan-builds-robots/AI-real-estate-appraiser" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="40" height="40">
+                    </a>
+                    
+                    <div style="margin: 5px;"></div>
+                    
+                    <a href="https://play.google.com/store/apps/details?id=daniel.ajayi.gottaget24" target="_blank">
+                        <img 
+                            src="icons/google-play-badge2.png" 
+                            alt="Google Play" height="40"
+                        >
+                    </a>
+                    
+                </div>
+            </div>
+
+
+            <!-- ttdf project site -->
+            <div class="project white-bg web-dev">
+                <a href="http://www.teddycares.epizy.com/" target="_blank">
+                    <p class="extra-big underline"><b>Teddy The Depression Fighter Project Website</b></p>
+                </a>
+                <p class="left-text">A landing page created with <b>HTML, CSS, Javascript, and Bootstrap</b> to display my <b>depression-fighting app</b>.</p>
+
+
+
+                <iframe class="drop-shadow" width="100%" height="360" src="http://www.teddycares.epizy.com"></iframe>
+
+                <div style='margin: 10px'></div>
+
+                <!-- icons  -->
+                <div class="p-horizontal glow">
+                    
+                    <a href="https://github.com/dan-builds-robots/AI-real-estate-appraiser" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="40" height="40">
+                    </a>
+                    
+                </div>
+            </div>
+
+
+            <!-- apple hit -->
+            <div class="project white-bg mobile-apps games" style="height:540">
+                <p class="extra-big"><b>Apple Hit</b></p>
+
+                <div class="left-text">
+                    <p><b>Android mobile game</b> where users <b>tap the screen</b> to throw a knife across a pond and <b>hit an apple</b> without hitting a duck. <b>Ducks increase in speed</b> and quantity as the user's score increases. <span class="faded-text">constructed summer of 2020</span></p>
+                </div>
+
+                <!-- icons  -->
+                <div class="bottom p-horizontal glow">
+                    
+                    <a href="https://github.com/dan-builds-robots/AI-real-estate-appraiser" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="40" height="40">
+                    </a>
+                    
+                    <div style="margin: 5px;"></div>
+                    
+                    <a href="https://play.google.com/store/apps/details?id=daniel.ajayi.gottaget24" target="_blank">
+                        <img 
+                            src="icons/google-play-badge2.png" 
+                            alt="Google Play" height="40"
+                        >
+                    </a>
+                    
+                </div>
+            </div>
+
+
+            <!-- web portfolio site -->
+            <div class="project white-bg web-dev" style="height:610">
+                <p class="extra-big"><b>Web Portfolio Site (old)</b></p>
+
+                <div class="left-text">
+                    <p>A website I created to show off the other websites that I've built. A primitive version of the site you are currently on. <span class="faded-text">constructed May of 2021</span></p>
+                </div>
+                <!-- <li class="faded-text">constructed May of 2021</li> -->
+
+                <iframe class="drop-shadow" width="100%" height="360" src="http://dbw.epizy.com/?i=1/"></iframe>
+                <!-- icons  -->
+                <div class="bottom p-horizontal glow">
+                    
+                    <a href="https://github.com/dan-builds-robots/AI-real-estate-appraiser" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="40" height="40">
+                    </a>
+                    
+                    <div style="margin: 5px;"></div>
+                    
+                    <a href="https://play.google.com/store/apps/details?id=daniel.ajayi.gottaget24" target="_blank">
+                        <img 
+                            src="icons/google-play-badge2.png" 
+                            alt="Google Play" height="40"
+                        >
+                    </a>
+                    
+                </div>
+            </div>
+
+
+            <!-- personal site -->
+            <div class="project white-bg web-dev" style="height:540">
+                <p class="extra-big"><b>Personal Site</b></p>
+
+                <div class="left-text">
+                    <p>The <b>project of projects</b>, created to demonstrate all the projects. The <b>site you are on currently</b>. <span class="faded-text">constructed Januaray of 2022</span></p>
+                </div>
+
+                <!-- icons  -->
+                <div class="bottom p-horizontal glow">
+                    
+                    <a href="https://github.com/dan-builds-robots/AI-real-estate-appraiser" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="40" height="40">
+                    </a>
+                    
+                    <div style="margin: 5px;"></div>
+                    
+                    <a href="https://play.google.com/store/apps/details?id=daniel.ajayi.gottaget24" target="_blank">
+                        <img 
+                            src="icons/google-play-badge2.png" 
+                            alt="Google Play" height="40"
+                        >
+                    </a>
+                    
+                </div>
+            </div>
+
+            
+
+        </div>
+        <div style="padding: 20px"></div>
+        
+        <!-- footer -->
+        <div class='footer blue white-text'>
+            
+            <!-- horizontal layout -->
+            <div class="p-horizontal center2 footer2" style="width: fit-content;">
+                
+                <!-- signature -->
+                <div style='font-size: 120; margin: 0 50 50 50;'>dajayi</div>
+                
+                <!-- spacing -->
+                <div style='margin: 70px;'></div>
+
+                <div class='p-horizontal' style="margin-top: 60">
+                
+                    <!-- links -->
+                    <div class="thicc white-text underline">
+                        <a href="index.html#projects" class="white-text"><p>Projects</p></a>
+                        <a href="experience.html" class="white-text"><p>Experience</p></a>
+                        <a href="timeline.html" class="white-text"><p>Coursework</p></a>
+                    </div>
+                    
+                    <!-- spacing -->
+                    <div class='spacing'></div>
+
+                    <!-- contacts -->
+                    <div>
+                        <p class='thicc'>Contacts</p>
+                        <p>Daniel Ajayi</p>
+                        <a href="timeline.html" class="white-text underline" target="_blank"><p>dajayi@mit.edu</p></a>
+                    </div>
+
+                    <div style="margin: 30"></div>
+                </div>
+                
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    
+
+    <!-- code required for javascript to work -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <!-- Load React -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <!-- <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script> -->
+    <!-- <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script> -->
+
+    <!-- Loading React components -->
+    <!-- <script src="project.js"></script> -->
+
+    <script>
+
+        filterSelection("all");
+
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("project");
+            if (c == "all") c = "";
+            // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+            for (i = 0; i < x.length; i++) {
+                removeClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) addClass(x[i], "show");
+            }
+        }
+
+        // Show filtered elements
+        function addClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {
+                element.className += " " + arr2[i];
+                }
+            }
+        }
+
+        // Hide elements that are not selected
+        function removeClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                arr1.splice(arr1.indexOf(arr2[i]), 1); 
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+        $('#carouselExampleIndicators').carousel({
+            interval: 3000
+        });
+
+        // Add active class to the current control button (highlight it)
+        var btnContainer = document.getElementById("filter-container2");
+        var btns = document.getElementsByClassName("filter2");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function() {
+                var current = document.getElementsByClassName("active2");
+                current[0].className = current[0].className.replace(" active2", "");
+                this.className += " active2";
+            });
+        }
+        
+
+        $(document).ready(function () {
+                $('.dropdown-toggle').dropdown();
+            });
+
+        // var links = document.links;
+        // for (var i = 0; i < links.length; i++) {
+        //     links[i].target = "_blank";
+        // }
+
+
+        var slideIndex = 1;
+        // const autoAdvance = 0;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+
+            var slides = document.getElementsByClassName("slide");
+            // var dots = document.getElementsByClassName("demo");
+            // var captionText = document.getElementById("caption");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            // for (i = 0; i < dots.length; i++) {
+            //     dots[i].className = dots[i].className.replace(" active", "");
+            // }
+            slides[slideIndex-1].style.display = "block";
+
+            // setTimeout(alert('hello'), 2000)
+            const autoAdvance = setTimeout(plusSlides, 2000, 1);
+            // clearTimeout(autoAdvance);
+
+            // dots[slideIndex-1].className += " active";
+            // captionText.innerHTML = dots[slideIndex-1].alt;
+            
+        }
+    </script>
+
+</body>
