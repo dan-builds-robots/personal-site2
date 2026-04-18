@@ -99,6 +99,12 @@ const shipped = [
 const experience = [
   {
     where: "Citadel Securities",
+    what: "Software engineering intern · returning class",
+    when: "2024",
+    logo: "/logos/citadel.jpeg",
+  },
+  {
+    where: "Citadel Securities",
     what: "Software engineering intern",
     when: "2023",
     logo: "/logos/citadel.jpeg",
@@ -144,7 +150,7 @@ export default function Page() {
 
         <div className="relative h-44 w-44 shrink-0 overflow-hidden rounded-sm ring-1 ring-rule sm:h-52 sm:w-52">
           <Image
-            src="/baby.jpg"
+            src="/baby.png"
             alt="Daniel as a baby in a playpen, mid-bite on a chicken leg, staring directly at the camera"
             fill
             sizes="(min-width: 640px) 13rem, 11rem"
