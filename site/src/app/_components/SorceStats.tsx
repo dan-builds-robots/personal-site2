@@ -81,7 +81,7 @@ export function SorceStats() {
     >
       {stats.map((s, i) => (
         <div key={s.label} className="group">
-          <div className="text-2xl font-semibold tracking-[-0.03em] tabular-nums transition-colors duration-200 group-hover:text-accent sm:text-3xl">
+          <div className="font-mono text-2xl font-medium tracking-[-0.02em] tabular-nums transition-colors duration-200 group-hover:text-accent sm:text-3xl">
             {format(values[i], s.template)}
           </div>
           <div className="mt-1 font-mono text-[0.62rem] uppercase tracking-[0.2em] text-muted transition-colors duration-200 group-hover:text-foreground/80">

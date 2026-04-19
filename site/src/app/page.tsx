@@ -3,10 +3,10 @@ import { Reveal } from "./_components/Reveal";
 import { SorceStats } from "./_components/SorceStats";
 
 const socials = [
-  { label: "Twitter", href: "https://x.com/therealdajayi" },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/dan-ajayi/" },
-  { label: "GitHub", href: "https://github.com/dan-builds-robots" },
-  { label: "Email", href: "mailto:dan@sorce.jobs" },
+  { label: "twitter", href: "https://x.com/therealdajayi" },
+  { label: "linkedin", href: "https://www.linkedin.com/in/dan-ajayi/" },
+  { label: "github", href: "https://github.com/dan-builds-robots" },
+  { label: "email", href: "mailto:dan@sorce.jobs" },
 ];
 
 const shipped = [
@@ -175,7 +175,7 @@ export default function Page() {
               href={s.href}
               target="_blank"
               rel="noreferrer"
-              className="group inline-flex items-center text-muted underline-offset-[5px] transition-colors duration-200 hover:text-foreground hover:underline"
+              className="group inline-flex items-center font-mono text-[0.82rem] text-muted underline-offset-[5px] transition-colors duration-200 hover:text-foreground hover:underline"
             >
               <span
                 aria-hidden
@@ -273,14 +273,20 @@ export default function Page() {
                           className="object-cover"
                         />
                       </div>
-                      <div className="pointer-events-none absolute inset-0 z-[2] bg-gradient-to-t from-background via-background/85 to-background/55 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                      <div
+                        className="pointer-events-none absolute inset-0 z-[2] opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                        style={{
+                          background:
+                            "linear-gradient(to bottom, rgba(10,11,19,0.92) 0%, rgba(10,11,19,0.5) 32%, rgba(10,11,19,0.5) 62%, rgba(10,11,19,0.94) 100%)",
+                        }}
+                      />
                     </>
                   )}
                   <div className="pointer-events-none relative z-10 flex flex-1 flex-col">
                     <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
                       <span
-                        className={`inline-flex items-baseline gap-1.5 font-semibold tracking-[-0.025em] transition-colors duration-200 group-hover:text-accent ${
-                          isFeature ? "text-3xl sm:text-4xl" : "text-xl"
+                        className={`inline-flex items-baseline gap-1.5 font-mono font-medium tracking-[-0.01em] transition-colors duration-200 group-hover:text-accent ${
+                          isFeature ? "text-2xl sm:text-[1.75rem]" : "text-lg"
                         }`}
                       >
                         {s.name}
