@@ -1,16 +1,12 @@
 import Image from "next/image";
+import { Reveal } from "./_components/Reveal";
+import { SorceStats } from "./_components/SorceStats";
 
 const socials = [
   { label: "Twitter", href: "https://x.com/therealdajayi" },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/dan-ajayi/" },
   { label: "GitHub", href: "https://github.com/dan-builds-robots" },
   { label: "Email", href: "mailto:dan@sorce.jobs" },
-];
-
-const sorceStats = [
-  { value: "~1M", label: "users" },
-  { value: "1M+", label: "applications" },
-  { value: "1K+", label: "hires" },
 ];
 
 const shipped = [
@@ -49,10 +45,12 @@ const shipped = [
   },
   {
     name: "offer-watch",
-    href: "https://github.com/dan-builds-robots/offer-watch",
-    role: "solo build",
-    pitch: "Parses your inbox for internship and job decisions.",
-    tag: "HackMIT Interaction Prize · 2024",
+    href: "https://www.linkedin.com/posts/dan-ajayi_i-participated-in-hackmit-with-my-teammates-activity-7254189978929311744-Cgfz",
+    role: "HackMIT team",
+    pitch:
+      "Parses your inbox for internship and job decisions. Won the HackMIT Interaction Prize — plus a North Face jacket and AirPods.",
+    tag: "HackMIT · 2024",
+    hoverImage: "/offerwatch-team.jpeg",
   },
   {
     name: "RoboTokens",
@@ -157,7 +155,7 @@ export default function Page() {
         <p
           className="mt-8 max-w-xl text-[1.08rem] leading-[1.55] text-foreground/85 opacity-0 [animation:rise_0.7s_ease-out_440ms_forwards]"
         >
-          CTO &amp; co-founder at{" "}
+          CTO &amp; co-founder @{" "}
           <a
             href="https://sorce.jobs"
             className="text-foreground underline decoration-accent decoration-2 underline-offset-[6px] transition-colors hover:text-accent"
@@ -205,6 +203,7 @@ export default function Page() {
 
       <div className="mt-24 space-y-24">
         {/* Now */}
+        <Reveal>
         <Section title="Now">
           <article className="border border-rule bg-foreground/[0.015] p-6 transition-colors duration-300 hover:bg-foreground/[0.035] sm:p-8">
             <div className="flex flex-wrap items-baseline gap-x-4 gap-y-2">
@@ -235,31 +234,24 @@ export default function Page() {
               million users, and Y Combinator let us in after we applied past
               the deadline.
             </p>
-            <div className="mt-7 grid grid-cols-3 gap-4 border-t border-rule pt-6">
-              {sorceStats.map((s) => (
-                <div key={s.label} className="group">
-                  <div className="text-2xl font-semibold tracking-[-0.03em] transition-colors duration-200 group-hover:text-accent sm:text-3xl">
-                    {s.value}
-                  </div>
-                  <div className="mt-1 font-mono text-[0.62rem] uppercase tracking-[0.2em] text-muted transition-colors duration-200 group-hover:text-foreground/80">
-                    {s.label}
-                  </div>
-                </div>
-              ))}
-            </div>
+            <SorceStats />
           </article>
         </Section>
+        </Reveal>
 
         {/* Shipped — bento */}
+        <Reveal>
         <Section title="Shipped before">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             {shipped.map((s, i) => {
               const span = bentoSpan(i);
               const isFeature = i === 0;
+              const hoverImage =
+                "hoverImage" in s ? (s as { hoverImage: string }).hoverImage : undefined;
               return (
                 <article
                   key={s.name}
-                  className={`group relative flex flex-col border border-rule p-5 transition-colors duration-300 hover:bg-foreground/[0.025] sm:p-6 ${span} ${
+                  className={`group relative flex flex-col overflow-hidden border border-rule p-5 transition-colors duration-300 hover:bg-foreground/[0.025] sm:p-6 ${span} ${
                     isFeature ? "sm:p-7" : ""
                   }`}
                 >
@@ -270,6 +262,20 @@ export default function Page() {
                     aria-label={s.name}
                     className="absolute inset-0 z-0"
                   />
+                  {hoverImage && (
+                    <>
+                      <div className="pointer-events-none absolute inset-0 z-[1] opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                        <Image
+                          src={hoverImage}
+                          alt=""
+                          fill
+                          sizes="(min-width: 640px) 22rem, 100vw"
+                          className="object-cover"
+                        />
+                      </div>
+                      <div className="pointer-events-none absolute inset-0 z-[2] bg-gradient-to-t from-background via-background/85 to-background/55 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                    </>
+                  )}
                   <div className="pointer-events-none relative z-10 flex flex-1 flex-col">
                     <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
                       <span
@@ -305,8 +311,10 @@ export default function Page() {
             })}
           </div>
         </Section>
+        </Reveal>
 
         {/* Experience */}
+        <Reveal>
         <Section title="Experience">
           <ul className="divide-y divide-rule border-y border-rule">
             {experience.map((e) => (
@@ -338,51 +346,86 @@ export default function Page() {
             ))}
           </ul>
         </Section>
+        </Reveal>
 
-        {/* Education */}
-        <Section title="Education">
-          <div className="group flex flex-wrap items-center gap-6 border border-rule p-6 transition-colors duration-300 hover:bg-foreground/[0.025] sm:p-8">
-            <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-sm bg-foreground/5 ring-1 ring-rule transition-colors duration-300 group-hover:ring-accent/30">
-              <Image
-                src="/logos/mit.png"
-                alt="MIT seal"
-                width={64}
-                height={64}
-                className="h-14 w-14 object-contain"
-              />
-            </div>
-            <div>
-              <div className="text-xl font-semibold tracking-[-0.025em]">
-                Massachusetts Institute of Technology
+        {/* Education — MIT + how I got in */}
+        <Reveal>
+          <Section title="Education">
+            <div className="space-y-4">
+              <div className="group flex flex-wrap items-center gap-6 border border-rule p-6 transition-colors duration-300 hover:bg-foreground/[0.025] sm:p-8">
+                <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-sm bg-foreground/5 ring-1 ring-rule transition-colors duration-300 group-hover:ring-accent/30">
+                  <Image
+                    src="/logos/mit.png"
+                    alt="MIT seal"
+                    width={64}
+                    height={64}
+                    className="h-14 w-14 object-contain"
+                  />
+                </div>
+                <div>
+                  <div className="text-xl font-semibold tracking-[-0.025em]">
+                    Massachusetts Institute of Technology
+                  </div>
+                  <div className="mt-1 text-foreground/75">
+                    Course 6-3{" "}
+                    <span className="text-muted">
+                      (B.S. Computer Science &amp; Computer Engineering)
+                    </span>
+                  </div>
+                </div>
+                <span className="ml-auto font-mono text-[0.7rem] uppercase tracking-[0.2em] text-muted">
+                  2021 — 2025
+                </span>
               </div>
-              <div className="mt-1 text-foreground/75">
-                B.S. Electrical Engineering &amp; Computer Science
+
+              <div className="flex flex-col gap-4 border border-rule p-6 transition-colors duration-300 hover:bg-foreground/[0.02] sm:p-7">
+                <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                  <span className="font-mono text-[0.64rem] uppercase tracking-[0.22em] text-muted">
+                    ↑ how I got in
+                  </span>
+                </div>
+                <p className="max-w-2xl text-[0.98rem] leading-[1.6] text-foreground/85">
+                  I wrote a rap for my MIT application.{" "}
+                  <span className="text-foreground">Admissions loved it.</span>{" "}
+                  5,200+ organic streams on Spotify since.
+                </p>
+                <iframe
+                  title="Spotify player — the MIT application rap"
+                  src="https://open.spotify.com/embed/track/4WaBawcuGJewl1LA5a6Y5w?utm_source=generator"
+                  width="100%"
+                  height={152}
+                  frameBorder={0}
+                  loading="lazy"
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  className="rounded-xl"
+                />
               </div>
             </div>
-            <span className="ml-auto font-mono text-[0.7rem] uppercase tracking-[0.2em] text-muted">
-              2021 — 2025
+          </Section>
+        </Reveal>
+
+        <Reveal>
+          <p className="text-[0.95rem] leading-[1.6] text-foreground/60">
+            <span className="font-mono text-[0.62rem] uppercase tracking-[0.26em] text-muted">
+              Off-hours —{" "}
             </span>
-          </div>
-        </Section>
+            piano, weightlifting, an overactive Spotify account, movies.
+          </p>
+        </Reveal>
 
-        <p className="text-[0.95rem] leading-[1.6] text-foreground/60">
-          <span className="font-mono text-[0.62rem] uppercase tracking-[0.26em] text-muted">
-            Off-hours —{" "}
-          </span>
-          piano, weightlifting, an overactive Spotify account, movies.
-        </p>
-
-        <footer className="flex flex-wrap items-center justify-between gap-4 border-t border-rule pt-8 text-xs text-muted">
-          <span className="font-mono uppercase tracking-[0.22em]">
-            Daniel Ajayi · 2026
-          </span>
-          <a
-            href="mailto:dan@sorce.jobs"
-            className="font-mono uppercase tracking-[0.22em] underline-offset-[5px] transition-colors hover:text-accent hover:underline"
-          >
-            dan@sorce.jobs
-          </a>
-        </footer>
+        <Reveal>
+          <footer className="flex flex-wrap items-center justify-between gap-4 border-t border-rule pt-8 text-xs text-muted">
+            <span className="font-mono uppercase tracking-[0.22em]">
+              Daniel Ajayi · 2026
+            </span>
+            <a
+              href="mailto:dan@sorce.jobs"
+              className="font-mono uppercase tracking-[0.22em] underline-offset-[5px] transition-colors hover:text-accent hover:underline"
+            >
+              dan@sorce.jobs
+            </a>
+          </footer>
+        </Reveal>
       </div>
     </main>
   );
