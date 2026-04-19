@@ -3,10 +3,67 @@ import { Reveal } from "./_components/Reveal";
 import { SorceStats } from "./_components/SorceStats";
 
 const socials = [
-  { label: "twitter", href: "https://x.com/therealdajayi" },
-  { label: "linkedin", href: "https://www.linkedin.com/in/dan-ajayi/" },
-  { label: "github", href: "https://github.com/dan-builds-robots" },
-  { label: "email", href: "mailto:dan@sorce.jobs" },
+  {
+    label: "twitter",
+    href: "https://x.com/therealdajayi",
+    icon: (
+      <svg
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        aria-hidden
+        className="h-3.5 w-3.5"
+      >
+        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+      </svg>
+    ),
+  },
+  {
+    label: "linkedin",
+    href: "https://www.linkedin.com/in/dan-ajayi/",
+    icon: (
+      <svg
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        aria-hidden
+        className="h-3.5 w-3.5"
+      >
+        <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5S0 4.881 0 3.5C0 2.12 1.11 1 2.5 1s2.48 1.12 2.48 2.5zM.22 8h4.56v13H.22zM8.73 8H13v1.81c.62-.97 2.14-1.81 3.9-1.81 4.18 0 5.1 2.75 5.1 6.32V21h-4.56v-5.43c0-1.3-.02-2.98-1.81-2.98-1.82 0-2.1 1.42-2.1 2.89V21H8.73z" />
+      </svg>
+    ),
+  },
+  {
+    label: "github",
+    href: "https://github.com/dan-builds-robots",
+    icon: (
+      <svg
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        aria-hidden
+        className="h-3.5 w-3.5"
+      >
+        <path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.04c-3.34.73-4.04-1.61-4.04-1.61-.55-1.38-1.34-1.75-1.34-1.75-1.09-.74.08-.73.08-.73 1.2.08 1.83 1.24 1.83 1.24 1.07 1.84 2.81 1.31 3.49 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1-.32 3.3 1.23a11.48 11.48 0 016 0c2.3-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.61-2.8 5.62-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0024 12.5C24 5.87 18.63.5 12 .5z" />
+      </svg>
+    ),
+  },
+  {
+    label: "email",
+    href: "mailto:dan@sorce.jobs",
+    icon: (
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden
+        className="h-3.5 w-3.5"
+      >
+        <path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2z" />
+        <path d="M22 6L12 13 2 6" />
+      </svg>
+    ),
+  },
 ];
 
 const shipped = [
@@ -179,9 +236,9 @@ export default function Page() {
             >
               <span
                 aria-hidden
-                className="inline-block w-0 overflow-hidden whitespace-nowrap opacity-0 transition-all duration-300 group-hover:mr-1.5 group-hover:w-3 group-hover:opacity-100"
+                className="inline-flex w-0 items-center overflow-hidden opacity-0 transition-all duration-300 group-hover:mr-2 group-hover:w-3.5 group-hover:text-accent group-hover:opacity-100"
               >
-                →
+                {s.icon}
               </span>
               {s.label}
             </a>
