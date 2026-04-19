@@ -127,16 +127,16 @@ export default function Page() {
   return (
     <main className="mx-auto max-w-4xl px-6 py-20 sm:py-28 md:px-10">
       {/* Hero — centered oversized scene */}
-      <section className="flex min-h-[85vh] flex-col items-center justify-center text-center">
-        <p className="font-mono text-[0.72rem] uppercase tracking-[0.3em] text-muted">
+      <section className="flex min-h-[78vh] flex-col items-center justify-center text-center">
+        <p
+          className="font-mono text-[0.72rem] uppercase tracking-[0.3em] text-muted opacity-0 [animation:rise_0.7s_ease-out_0ms_forwards]"
+        >
           San Francisco / 2026
         </p>
 
-        <h1 className="mt-6 text-[clamp(3rem,14vw,10rem)] font-semibold uppercase leading-[0.88] tracking-[-0.05em]">
-          Daniel Ajayi
-        </h1>
-
-        <div className="group relative mt-12 h-40 w-40 overflow-hidden rounded-sm ring-1 ring-rule transition-all duration-500 hover:ring-2 hover:ring-accent/50 sm:h-48 sm:w-48">
+        <div
+          className="group relative mt-8 h-40 w-40 overflow-hidden rounded-full opacity-0 ring-1 ring-rule transition-all duration-500 [animation:rise_0.8s_ease-out_120ms_forwards] hover:ring-2 hover:ring-accent/50 sm:h-48 sm:w-48"
+        >
           <Image
             src="/baby.png"
             alt="Daniel as a baby in a playpen, mid-bite on a chicken leg, staring directly at the camera"
@@ -148,7 +148,15 @@ export default function Page() {
           />
         </div>
 
-        <p className="mt-10 max-w-xl text-[1.08rem] leading-[1.55] text-foreground/85">
+        <h1
+          className="mt-10 text-[clamp(3rem,14vw,10rem)] font-extrabold uppercase leading-[0.88] tracking-[-0.05em] opacity-0 [animation:rise_0.9s_ease-out_260ms_forwards]"
+        >
+          Daniel Ajayi
+        </h1>
+
+        <p
+          className="mt-8 max-w-xl text-[1.08rem] leading-[1.55] text-foreground/85 opacity-0 [animation:rise_0.7s_ease-out_440ms_forwards]"
+        >
           CTO &amp; co-founder at{" "}
           <a
             href="https://sorce.jobs"
@@ -160,7 +168,9 @@ export default function Page() {
           build AI agents that apply to jobs so humans don&rsquo;t have to.
         </p>
 
-        <nav className="mt-10 flex flex-wrap justify-center gap-x-7 gap-y-2 text-sm">
+        <nav
+          className="mt-10 flex flex-wrap justify-center gap-x-7 gap-y-2 text-sm opacity-0 [animation:rise_0.7s_ease-out_580ms_forwards]"
+        >
           {socials.map((s) => (
             <a
               key={s.label}
@@ -180,8 +190,16 @@ export default function Page() {
           ))}
         </nav>
 
-        <div className="mt-16 font-mono text-[0.62rem] uppercase tracking-[0.3em] text-muted">
-          ↓ work
+        <div className="mt-14 flex flex-col items-center gap-2 opacity-0 [animation:rise_0.7s_ease-out_720ms_forwards]">
+          <span className="font-mono text-[0.62rem] uppercase tracking-[0.3em] text-muted">
+            scroll for work
+          </span>
+          <span
+            aria-hidden
+            className="text-muted [animation:bounce-soft_1.8s_ease-in-out_1500ms_infinite]"
+          >
+            ↓
+          </span>
         </div>
       </section>
 
