@@ -24,7 +24,7 @@ const shipped = [
           href="https://www.linkedin.com/in/joshua-bello-411264174"
           target="_blank"
           rel="noreferrer"
-          className="underline decoration-rule underline-offset-[3px] hover:text-foreground hover:decoration-accent"
+          className="underline decoration-rule underline-offset-[3px] transition-colors hover:text-foreground hover:decoration-accent"
         >
           Joshua Bello
         </a>
@@ -38,7 +38,7 @@ const shipped = [
           href="https://x.com/therealdajayi/status/1983257988434698620"
           target="_blank"
           rel="noreferrer"
-          className="text-foreground underline decoration-accent decoration-2 underline-offset-[5px] hover:text-accent"
+          className="text-foreground underline decoration-accent decoration-2 underline-offset-[5px] transition-colors hover:text-accent"
         >
           Drew Houston wrote the first check
         </a>
@@ -139,7 +139,7 @@ export default function Page() {
             CTO &amp; co-founder at{" "}
             <a
               href="https://sorce.jobs"
-              className="text-foreground underline decoration-accent decoration-2 underline-offset-[6px] hover:text-accent"
+              className="text-foreground underline decoration-accent decoration-2 underline-offset-[6px] transition-colors hover:text-accent"
             >
               Sorce
             </a>{" "}
@@ -148,14 +148,14 @@ export default function Page() {
           </p>
         </div>
 
-        <div className="relative h-44 w-44 shrink-0 overflow-hidden rounded-sm ring-1 ring-rule sm:h-52 sm:w-52">
+        <div className="group relative h-44 w-44 shrink-0 overflow-hidden rounded-sm ring-1 ring-rule transition-all duration-500 hover:ring-2 hover:ring-accent/40 sm:h-52 sm:w-52">
           <Image
             src="/baby.png"
             alt="Daniel as a baby in a playpen, mid-bite on a chicken leg, staring directly at the camera"
             fill
             sizes="(min-width: 640px) 13rem, 11rem"
             style={{ objectPosition: "50% 28%" }}
-            className="object-cover"
+            className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
             priority
           />
         </div>
@@ -168,8 +168,14 @@ export default function Page() {
             href={s.href}
             target="_blank"
             rel="noreferrer"
-            className="text-muted underline-offset-[5px] hover:text-foreground hover:underline"
+            className="group inline-flex items-center text-muted underline-offset-[5px] transition-colors duration-200 hover:text-foreground hover:underline"
           >
+            <span
+              aria-hidden
+              className="inline-block w-0 overflow-hidden whitespace-nowrap opacity-0 transition-all duration-300 group-hover:mr-1.5 group-hover:w-3 group-hover:opacity-100"
+            >
+              →
+            </span>
             {s.label}
           </a>
         ))}
@@ -177,16 +183,19 @@ export default function Page() {
 
       {/* Now */}
       <Section title="Now">
-        <article className="border border-rule bg-foreground/[0.015] p-6 sm:p-8">
+        <article className="border border-rule bg-foreground/[0.015] p-6 transition-colors duration-300 hover:bg-foreground/[0.035] sm:p-8">
           <div className="flex flex-wrap items-baseline gap-x-4 gap-y-2">
             <a
               href="https://sorce.jobs"
               target="_blank"
               rel="noreferrer"
-              className="text-4xl font-semibold tracking-[-0.04em] hover:text-accent sm:text-5xl"
+              className="group text-4xl font-semibold tracking-[-0.04em] transition-colors duration-200 hover:text-accent sm:text-5xl"
             >
               Sorce{" "}
-              <span aria-hidden className="text-muted">
+              <span
+                aria-hidden
+                className="inline-block text-muted transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-0.5 group-hover:text-accent"
+              >
                 ↗
               </span>
             </a>
@@ -205,11 +214,11 @@ export default function Page() {
           </p>
           <div className="mt-7 grid grid-cols-3 gap-4 border-t border-rule pt-6">
             {sorceStats.map((s) => (
-              <div key={s.label}>
-                <div className="text-2xl font-semibold tracking-[-0.03em] sm:text-3xl">
+              <div key={s.label} className="group">
+                <div className="text-2xl font-semibold tracking-[-0.03em] transition-colors duration-200 group-hover:text-accent sm:text-3xl">
                   {s.value}
                 </div>
-                <div className="mt-1 font-mono text-[0.62rem] uppercase tracking-[0.2em] text-muted">
+                <div className="mt-1 font-mono text-[0.62rem] uppercase tracking-[0.2em] text-muted transition-colors duration-200 group-hover:text-foreground/80">
                   {s.label}
                 </div>
               </div>
@@ -222,30 +231,37 @@ export default function Page() {
       <Section title="Shipped before">
         <ul className="divide-y divide-rule border-y border-rule">
           {shipped.map((s) => (
-            <li key={s.name} className="py-6">
-              <a
-                href={s.href}
-                target="_blank"
-                rel="noreferrer"
-                className="group block"
-              >
-                <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-                  <span className="text-xl font-semibold tracking-[-0.025em] group-hover:text-accent sm:text-2xl">
-                    {s.name}
+            <li
+              key={s.name}
+              className="group py-6 transition-colors duration-200 hover:bg-foreground/[0.02]"
+            >
+              <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                <a
+                  href={s.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-baseline gap-1.5 text-xl font-semibold tracking-[-0.025em] transition-colors duration-200 hover:text-accent group-hover:text-accent sm:text-2xl"
+                >
+                  {s.name}
+                  <span
+                    aria-hidden
+                    className="inline-block -translate-x-1 text-muted opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:text-accent group-hover:opacity-100"
+                  >
+                    ↗
                   </span>
-                  <span className="font-mono text-[0.66rem] uppercase tracking-[0.18em] text-muted">
-                    {s.role}
-                  </span>
-                </div>
-                <div className="mt-2 grid gap-2 sm:grid-cols-[1fr_auto] sm:items-baseline sm:gap-6">
-                  <p className="max-w-2xl text-[0.95rem] leading-[1.55] text-foreground/75">
-                    {s.pitch}
-                  </p>
-                  <span className="font-mono text-[0.66rem] uppercase tracking-[0.16em] text-muted sm:text-right">
-                    {s.tag}
-                  </span>
-                </div>
-              </a>
+                </a>
+                <span className="font-mono text-[0.66rem] uppercase tracking-[0.18em] text-muted">
+                  {s.role}
+                </span>
+              </div>
+              <div className="mt-2 grid gap-2 sm:grid-cols-[1fr_auto] sm:items-baseline sm:gap-6">
+                <p className="max-w-2xl text-[0.95rem] leading-[1.55] text-foreground/75 transition-colors duration-200 group-hover:text-foreground/90">
+                  {s.pitch}
+                </p>
+                <span className="font-mono text-[0.66rem] uppercase tracking-[0.16em] text-muted sm:text-right">
+                  {s.tag}
+                </span>
+              </div>
             </li>
           ))}
         </ul>
@@ -256,23 +272,17 @@ export default function Page() {
         <ul className="divide-y divide-rule border-y border-rule">
           {experience.map((e) => (
             <li
-              key={e.where}
-              className="grid items-center gap-4 py-5 sm:grid-cols-[3rem_14rem_1fr_auto] sm:gap-6"
+              key={`${e.where}-${e.when}`}
+              className="group grid items-center gap-4 py-5 transition-colors duration-300 hover:bg-foreground/[0.02] sm:grid-cols-[3rem_14rem_1fr_auto] sm:gap-6"
             >
-              <div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-sm bg-foreground/5 ring-1 ring-rule">
-                {e.logo ? (
-                  <Image
-                    src={e.logo}
-                    alt=""
-                    width={40}
-                    height={40}
-                    className="h-10 w-10 object-contain"
-                  />
-                ) : (
-                  <span className="font-mono text-[0.6rem] uppercase tracking-[0.1em] text-muted">
-                    {initials(e.where)}
-                  </span>
-                )}
+              <div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-sm bg-foreground/5 ring-1 ring-rule transition-colors duration-300 group-hover:ring-accent/30">
+                <Image
+                  src={e.logo}
+                  alt=""
+                  width={40}
+                  height={40}
+                  className="h-10 w-10 object-contain"
+                />
               </div>
               <span className="text-[1.05rem] font-semibold tracking-[-0.02em]">
                 {e.where}
@@ -290,8 +300,8 @@ export default function Page() {
 
       {/* Education */}
       <Section title="Education">
-        <div className="flex flex-wrap items-center gap-6 border border-rule p-6 sm:p-8">
-          <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-sm bg-foreground/5 ring-1 ring-rule">
+        <div className="group flex flex-wrap items-center gap-6 border border-rule p-6 transition-colors duration-300 hover:bg-foreground/[0.025] sm:p-8">
+          <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-sm bg-foreground/5 ring-1 ring-rule transition-colors duration-300 group-hover:ring-accent/30">
             <Image
               src="/logos/mit.png"
               alt="MIT seal"
@@ -316,11 +326,11 @@ export default function Page() {
 
       <footer className="mt-24 flex flex-wrap items-center justify-between gap-4 border-t border-rule pt-8 text-xs text-muted">
         <span className="font-mono uppercase tracking-[0.22em]">
-          Daniel Ajayi · {new Date().getFullYear()}
+          Daniel Ajayi · 2026
         </span>
         <a
           href="mailto:dan@sorce.jobs"
-          className="font-mono uppercase tracking-[0.22em] underline-offset-[5px] hover:text-accent hover:underline"
+          className="font-mono uppercase tracking-[0.22em] underline-offset-[5px] transition-colors hover:text-accent hover:underline"
         >
           dan@sorce.jobs
         </a>
@@ -344,13 +354,4 @@ function Section({
       {children}
     </section>
   );
-}
-
-function initials(name: string): string {
-  return name
-    .split(/\s+/)
-    .map((w) => w[0])
-    .filter(Boolean)
-    .slice(0, 3)
-    .join("");
 }
