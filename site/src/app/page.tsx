@@ -378,6 +378,19 @@ export default function Page() {
                       (B.S. Computer Science &amp; Computer Engineering)
                     </span>
                   </div>
+                  <div className="mt-3 font-mono text-[0.74rem] text-muted">
+                    <span className="uppercase tracking-[0.2em] text-foreground/60">
+                      favorite classes —{" "}
+                    </span>
+                    6.5840{" "}
+                    <span className="text-foreground/50">
+                      (Distributed Systems)
+                    </span>
+                    , 6.191{" "}
+                    <span className="text-foreground/50">
+                      (Computation Structures)
+                    </span>
+                  </div>
                 </div>
                 <span className="ml-auto font-mono text-[0.7rem] uppercase tracking-[0.2em] text-muted">
                   2021 — 2025
@@ -417,6 +430,30 @@ export default function Page() {
             </span>
             piano, weightlifting, an overactive Spotify account, movies.
           </p>
+        </Reveal>
+
+        <Reveal>
+          <a
+            href="https://github.com/dan-builds-robots"
+            target="_blank"
+            rel="noreferrer"
+            className="group block border-t border-rule pt-6 opacity-60 transition-opacity duration-300 hover:opacity-100"
+            aria-label="Daniel Ajayi's GitHub contribution activity"
+          >
+            <div className="mb-3 flex items-baseline justify-between font-mono text-[0.62rem] uppercase tracking-[0.26em] text-muted">
+              <span>— shipping daily</span>
+              <span className="transition-colors group-hover:text-accent">
+                github ↗
+              </span>
+            </div>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="https://ghchart.rshah.org/b48660/dan-builds-robots"
+              alt="GitHub contribution chart for dan-builds-robots, past year"
+              className="h-auto w-full"
+              loading="lazy"
+            />
+          </a>
         </Reveal>
 
         <Reveal>
