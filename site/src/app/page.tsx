@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Reveal } from "./_components/Reveal";
 import { SorceStats } from "./_components/SorceStats";
+import { TikTokReveal } from "./_components/TikTokReveal";
 
 const socials = [
   {
@@ -124,6 +125,15 @@ const shipped = [
     pitch:
       "Cross-platform app built in React Native — top 10 of 147 submissions.",
     tag: "2021",
+  },
+  {
+    name: "smart-room",
+    href: "https://www.tiktok.com/t/ZTkuyUN93/",
+    role: "MIT class build",
+    pitch:
+      "Whole-room automation: lights, appliances, and scenes controlled from an app over a local server. Built with friends on campus.",
+    tag: "MIT · 2022",
+    tiktokId: "7096345363115773227",
   },
   {
     name: "Curious George",
@@ -287,11 +297,17 @@ export default function Page() {
             </div>
             <p className="mt-5 text-[1.02rem] leading-[1.6] text-foreground/85">
               Tinder for jobs. Swipe right and our AI agent writes the
-              application for you. Going viral on TikTok, approaching a
-              million users, and Y Combinator let us in after we applied past
-              the deadline.
+              application for you. Went viral on TikTok (1.1M views),
+              approaching a million users, and Y Combinator let us in after we
+              applied past the deadline.
             </p>
             <SorceStats />
+            <div className="mt-6 border-t border-rule pt-5">
+              <TikTokReveal
+                videoId="7440646805701856554"
+                label="watch the viral tiktok (1.1M)"
+              />
+            </div>
           </article>
         </Section>
         </Reveal>
@@ -305,6 +321,8 @@ export default function Page() {
               const isFeature = i === 0;
               const hoverImage =
                 "hoverImage" in s ? (s as { hoverImage: string }).hoverImage : undefined;
+              const tiktokId =
+                "tiktokId" in s ? (s as { tiktokId: string }).tiktokId : undefined;
               return (
                 <article
                   key={s.name}
@@ -365,6 +383,14 @@ export default function Page() {
                     >
                       {s.pitch}
                     </p>
+                    {tiktokId && (
+                      <div className="mt-4">
+                        <TikTokReveal
+                          videoId={tiktokId}
+                          label="watch the build"
+                        />
+                      </div>
+                    )}
                     <span className="mt-auto pt-4 font-mono text-[0.62rem] uppercase tracking-[0.16em] text-muted">
                       {s.tag}
                     </span>
@@ -532,9 +558,10 @@ export default function Page() {
 }
 
 function bentoSpan(i: number): string {
-  // Ossy (0) and Clinical (6) span full width; others are half-width pairs
+  // Ossy (0), smart-room (4, has embed), Clinical (7) span full width
   if (i === 0) return "sm:col-span-2 sm:min-h-[14rem]";
-  if (i === 6) return "sm:col-span-2";
+  if (i === 4) return "sm:col-span-2";
+  if (i === 7) return "sm:col-span-2";
   return "";
 }
 
