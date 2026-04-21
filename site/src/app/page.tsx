@@ -190,7 +190,7 @@ const experience = [
 
 export default function Page() {
   return (
-    <main className="mx-auto max-w-4xl px-6 py-20 sm:py-28 md:px-10">
+    <main className="mx-auto max-w-6xl px-6 py-20 sm:py-28 md:px-10">
       {/* Hero — centered oversized scene */}
       <section className="flex min-h-[78vh] flex-col items-center justify-center text-center">
         <p
@@ -315,7 +315,7 @@ export default function Page() {
         {/* Shipped — bento */}
         <Reveal>
         <Section title="Shipped before">
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:[grid-auto-flow:dense]">
             {shipped.map((s, i) => {
               const span = bentoSpan(i);
               const isFeature = i === 0;
@@ -558,10 +558,12 @@ export default function Page() {
 }
 
 function bentoSpan(i: number): string {
-  // Ossy (0), smart-room (4, has embed), Clinical (7) span full width
-  if (i === 0) return "sm:col-span-2 sm:min-h-[14rem]";
-  if (i === 4) return "sm:col-span-2";
-  if (i === 7) return "sm:col-span-2";
+  // sm: 2-col grid.  lg: 4-col grid with dense auto-flow for a denser bento.
+  // Ossy (0) = feature centerpiece (2 cols × 2 rows on lg).
+  // smart-room (4) + Clinical (7) = full-width wide tiles on lg.
+  if (i === 0) return "sm:col-span-2 sm:min-h-[14rem] lg:col-span-2 lg:row-span-2 lg:min-h-[22rem]";
+  if (i === 4) return "sm:col-span-2 lg:col-span-4";
+  if (i === 7) return "sm:col-span-2 lg:col-span-4";
   return "";
 }
 
