@@ -48,7 +48,7 @@ const socials = [
   },
   {
     label: "email",
-    href: "mailto:dan@sorce.jobs",
+    href: "mailto:me@dajayi.com",
     icon: (
       <svg
         viewBox="0 0 24 24"
@@ -545,10 +545,10 @@ export default function Page() {
               Daniel Ajayi · 2026
             </span>
             <a
-              href="mailto:dan@sorce.jobs"
+              href="mailto:me@dajayi.com"
               className="font-mono uppercase tracking-[0.22em] underline-offset-[5px] transition-colors hover:text-accent hover:underline"
             >
-              dan@sorce.jobs
+              me@dajayi.com
             </a>
           </footer>
         </Reveal>
