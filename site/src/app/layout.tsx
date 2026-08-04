@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Daniel Ajayi",
+  title: "dajayi",
   description:
     "CTO and co-founder of Sorce — swipe-to-apply job search, backed by Y Combinator.",
 };
